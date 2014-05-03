@@ -7,16 +7,29 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel='stylesheet'/>
     <link rel='stylesheet' href='components/bootstrap/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!-- scripts -->
     <!-- meta -->
     <meta name="Description" content="Masjid Network: a platform for connecting people to the masjid">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="msvalidate.01" content="D05BC4FC5F616D6A06301CBDF35CF039" /><!--meta tag for bing-->
+    <meta name="msvalidate.01" content="D05BC4FC5F616D6A06301CBDF35CF039" />
   </head>
   <body>
     <div>
       <ng-view></ng-view>
     </div>
+    <script>
+        if (window.location.origin.indexOf('localhost') != -1) {
+              console.log('Running instance on localhost');
+        } 
+        else {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50585241-1', 'masjid-network.com');
+            ga('send', 'pageview');
+        }
+    </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.10.0/jquery.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
