@@ -1,0 +1,179 @@
+body{
+    height:100%;
+}
+@media (min-width: 320px) and (max-width: 400px){
+    .bg-image{
+        height: 280px;
+    }
+}
+@media (min-width: 401px) and (max-width: 500px){
+    .bg-image{
+        height: 340px;
+    }
+}
+@media (min-width: 501px) and (max-width: 600px){
+    .bg-image{
+        height: 400px;
+    }
+}
+@media (min-width: 601px) and (max-width: 767px){
+    .bg-image{
+        height: 500px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    .bg-image{
+        height: 550px;
+    }
+}
+@media (min-width: 991px){
+    .bg-image{
+        height: 750px;
+    }
+}
+
+@font-face{
+  	src: url('../fonts/glyphicons-halflings-regular.eot');
+  	src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+.signup-text{
+    color: rgb(0, 0, 0);
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.btn-default{
+    background:transparent;
+    border-color:rgb(0,0,0);
+}
+.btn-default:hover{
+    background:transparent;
+    border-color:rgb(0,0,0);
+}
+.navbar{
+   border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+   background-color: transparent;
+   background: transparent;
+}
+.navbar-toggle{
+    border:none;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #000000;
+}
+.navbar li{ 
+    color: #fff; 
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.signup-btn{
+    margin-top: 8px;
+}
+.navbar-header{
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    background-color: transparent;
+    background: transparent;
+}
+.bg-image{
+    position: relative;
+    z-index: 1;
+}
+.descriptive-text{
+    margin-top: 10px;
+}
+#home-image{
+    background-image: url('../images/home10.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+}
+.welcome-text{
+    margin-top:270px;
+}
+.modal-home{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    filter: alpha(opacity=80);  
+    -moz-opacity: 0.80;  
+    -khtml-opacity: 0.80; 
+    opacity: 0.80;
+    margin-top: -90px;
+    z-index: 2;
+    background-color: rgb(241, 191, 78);
+}
+.modal-toggle{
+    margin-right: 30px;
+}
+.margin-custom-top-40{
+    margin-top:40px;
+}
+.margin-custom-top-20{
+    margin-top:20px;
+}
+.p-custom{
+    font-size:11px;
+    font-weight:100 !important;
+}
+.underline:hover{
+    text-decoration:underline;
+}
+.h-custom{
+    font-weight:100 !important;
+}
+.text-custom-3{
+    letter-spacing: 3px;
+}
+.text-custom-2{
+    letter-spacing:2px;
+}
+.text-custom-1{
+    letter-spacing:1px;
+}
+a{
+    text-decoration: none;
+}
+.font-custom{
+    color:#000000;
+}
+.animation.ng-enter,
+.animation.ng-leave{
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+.animation.ng-enter{
+  opacity: 0;
+}
+.animation.ng-leave{
+  opacity: 1;
+}
+.animation.ng-enter.ng-enter-active{
+  opacity: 1;
+}
+.animation.ng-leave.ng-leave-active{
+  opacity: 0;
+}
+.modal-btn{
+  -webkit-transition:2s linear all;
+  transition:2s linear all;
+  opacity:1;
+}
+.modal-btn.ng-hide{
+  opacity:0;
+}
+.modal-btn.ng-hide-add, .modal-btn.ng-hide-remove{
+  display:block!important;
+}
+.glyphicon-custom-color{
+    color:#c1c1c4 !important;
+}

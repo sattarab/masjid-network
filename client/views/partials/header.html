@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default" role="navigation" style="border:none;">
+	<div class="container">
+	  <div class="navbar transparent navbar-header">
+	    <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="dropdown = !dropdown">
+	      <span class="icon-bar" ng-hide="dropdown"></span>
+	      <span class="icon-bar" ng-hide="dropdown"></span>
+	      <span class="icon-bar" ng-hide="dropdown"></span>
+	    </button>
+	  </div>
+	  <div class="collapse navbar-collapse navbar-responsive-collapse" collapse="navCollapsed">
+	    <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" style="text-decoration:none"><p class="font-custom text-custom-2 p-custom underline">HOME</p></a></li>
+          <li><a href="#" style="text-decoration:none"><p class="font-custom text-custom-2 p-custom underline">FEATURES</p></a></li>
+          <li><a href="#" style="text-decoration:none"><p class="font-custom text-custom-2 p-custom underline">CONTACT</p></a></li>
+          <li><a href="#" style="text-decoration:none"><p class="font-custom text-custom-2 p-custom underline">ABOUT</p></a></li>
+	      <li><small><a class="btn btn-default signup-btn" style="color:#000000;"><small>Sign up<small></a></small></li>
+	     </ul>
+	  </div>
+	</div>
+</nav>
+<div class="navbar-toggle modal-home" ng-show="dropdown">
+    <button type="button" class="navbar-toggle modal-toggle modal-btn" ng-show="dropdown" ng-click="dropdown = !dropdown">
+	    <span class="icon-bar" style="background-color:#000000"></span>
+    </button>
+    <br/><br/>
+    <div class="text-center">
+        <a href="#" style="text-decoration:none"><h4 class="font-custom text-custom-3 h-custom margin-custom-top-40 underline">HOME</h4></a>
+    </div>
+    <div class="text-center">
+        <a href="#" style="text-decoration:none"><h4 class="font-custom text-custom-3 h-custom margin-custom-top-40 underline">FEATURES</h4></a>
+    </div>
+    <div class="text-center">
+        <a href="#" style="text-decoration:none"><h4 class="font-custom text-custom-3 h-custom margin-custom-top-40 underline">ABOUT</h4></a>
+    </div>
+    <div class="text-center">
+        <a href="#" style="text-decoration:none"><h4 class="font-custom text-custom-3 h-custom margin-custom-top-40 underline">CONTACT</h4></a>
+    </div>
+</div>

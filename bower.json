@@ -1,0 +1,16 @@
+{
+    "name": "application-name",
+    "version": "0.0.1",
+    "dependencies": {
+        "angular": "1.2.14",
+        "angular-route": "1.2.14",
+        "angular-resource": "1.2.14",
+        "angular-animate": "1.2.14",
+        "angular-ui": "0.3.0",
+        "bootstrap": "3.1.1",
+        "angular-bootstrap": "0.10.0",
+        "angular-cookies": "1.2.14",
+        "videojs-youtube": "*",
+        "ngUpload": "*"
+    }
+}
