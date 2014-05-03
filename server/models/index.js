@@ -5,9 +5,9 @@ var fs = require('fs'),
 	sequelize = null,
 	db = {};
     
-if (process.env.HEROKU_POSTGRESQL_BLACK_URL) {
+if (process.env.HEROKU_POSTGRESQL_PURPLE_URL) {
     // the application is executed on Heroku ... use the postgres database
-    var match = process.env.HEROKU_POSTGRESQL_BLACK_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
+    var match = process.env.HEROKU_POSTGRESQL_PURPLE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
  
     sequelize = new Sequelize(match[5], match[1], match[2], {
         dialect:  'postgres',
