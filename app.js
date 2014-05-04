@@ -34,7 +34,7 @@ if ('development' === app.get('env')) {
 require('./routes')(app);
 
 db.sequelize
-.sync({ force: true})
+.sync({ force: false})
 .complete(function(err) {
     if (err) {
       throw err
