@@ -184,3 +184,9 @@ a{
     float: none;
     margin: 0 auto;
 }
+.validation-error{
+    color: #FF0000;
+}
+.validation-error-border{
+    border-color: rgba(205, 92, 92, 0.6) !important;
+}

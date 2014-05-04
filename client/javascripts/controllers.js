@@ -13,6 +13,9 @@ angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.dir
             if ($scope.user.password.localeCompare($scope.user.confirmPassword) != 0){
                 $scope.misMatch = true;
             } 
+            else{
+                $scope.misMatch = false;
+            }
         }
             /*$http.post('/api/register', {
                 firstName: $scope.user.firstName,

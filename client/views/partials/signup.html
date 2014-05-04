@@ -16,12 +16,13 @@
         </div>
         <div class="form-group">
             <label for="password"><small class="text-custom-1 p-custom">CREATE A PASSWORD</small></label>
-            <input name="password" type="password" class="form-control p-custom text-custom-1" id="password" placeholder="PASSWORD" ng-model="user.password" required>
+            <input name="password" type="password" class="form-control p-custom text-custom-1" id="password" placeholder="PASSWORD" ng-model="user.password" required ng-class="misMatch ? 'validation-error-border' : ''">
+            <p ng-show="misMatch" class="text-custom-1 p-custom validation-error">passwords do not match</p>
         </div>
         <div class="form-group">
             <label for="confirmPassword"><small class="text-custom-1 p-custom">CONFIRM PASSWORD</small></label>
-            <input name="password" type="password" class="form-control p-custom text-custom-1" id="confirmPassword" placeholder="CONFIRM PASSWORD" ng-model="user.confirmPassword" required>
-            <p ng-show="misMatch" class="text-custom-1 p-custom">passwords do not match</p>
+            <input name="password" type="password" class="form-control p-custom text-custom-1" id="confirmPassword" placeholder="CONFIRM PASSWORD" ng-model="user.confirmPassword" required ng-class="misMatch ? 'validation-error-border' : ''">
+            <p ng-show="misMatch" class="text-custom-1 p-custom validation-error">passwords do not match</p>
         </div>
         <button class="btn btn-default p-custom text-custom-1" ng-click="signup(signupForm.$valid)">Submit</button>
     </form>
