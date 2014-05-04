@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.directive', 'ngUpload'])
-.controller('HomeCtrl', function($scope, $http, $modal) {    
+.controller('HomeCtrl', function($scope, $http) {    
     $scope.dropdown = false;
 })
-.controller('SignupCtrl', function($scope){
+.controller('SignupCtrl', function($scope, $http){
     $scope.dropdown = false;
     $scope.misMatch = false;
     $scope.firstNameRequired = false;
@@ -13,9 +13,13 @@ angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.dir
     $scope.minLength = false;
     $scope.user = {};
     var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    $scope.closeAlert = function(index) {
+        $scope.alertMessage = null;
+    };
+    
     $scope.signup = function() {
         /* re-initalize */
-        $scope.misMatch = false;
         $scope.firstNameRequired = false;
         $scope.emailRequired = false;
         $scope.passwordRequired = false;
@@ -40,20 +44,24 @@ angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.dir
             $scope.minLength = true;
         }
         
-        if ($scope.misMatch || $scope.firstNameRequired || $scope.emailRequired || $scope.passwordRequired || $scope.minLength || $scope.invalidEmail){
+        if ($scope.firstNameRequired || $scope.emailRequired || $scope.invalidEmail || $scope.passwordRequired || $scope.minLength){
             return;
         }
-            /*$http.post('/api/register', {
+        else{
+            $http.post('/api/register', {
                 firstName: $scope.user.firstName,
                 lastName: $scope.user.lastName,
                 email: $scope.user.email,
                 password: $scope.user.password
             })
             .success(function(user) {
-                $scope.alertMessage = 'We will inform you soon'
+                $scope.alertType = 'success'
+                $scope.alertMessage = 'Thank you for signing up';
             })
             .error(function(err) {
-               
-            });*/
+                $scope.alertType = 'error'
+                $scope.alertMessage = 'an error occured please try again';
+            });
+        } 
     };
 });

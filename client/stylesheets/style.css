@@ -147,7 +147,10 @@ a{
     text-decoration: none;
 }
 .font-custom{
-    color:#000000;
+    color: #000000;
+}
+.font-custom-2{
+    color: rgb(240, 190, 80);
 }
 .animation.ng-enter,
 .animation.ng-leave{

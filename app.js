@@ -33,15 +33,6 @@ if ('development' === app.get('env')) {
 
 require('./routes')(app);
 
-/*var superagent = require('superagent');
-var testUser = superagent.agent();
-testUser
-  .post('http://localhost:8000/api/register')
-  .send({ id: 1, username: 'sattarab', password: '123' })
-  .end(function(err, res) {
-    console.log(err);
-  });*/
-
 db.sequelize
 .sync({ force: false})
 .complete(function(err) {
@@ -50,6 +41,14 @@ db.sequelize
     } 
     else {
       http.createServer(app).listen(app.get('port'), function() {
+          /*var superagent = require('superagent');
+          var testUser = superagent.agent();
+          testUser
+            .post('http://localhost:8000/api/register')
+            .send({ firstName:'a', email: 'c2sattara1@gmail.com', password: '123456' })
+            .end(function(err, res) {
+              console.log(err);
+            });*/
         console.log('Express server listening on port ' + app.get('port'));
       })
     }

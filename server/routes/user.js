@@ -8,12 +8,15 @@ var db = require('../models'),
 
 exports.register = function (req, res, next) {
 	db.User.create({
-		username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: security.hashPassword(req.body.password)
+	})
+	.success(function (user) {
+		res.send(200);
 	})
 	.error(function (err) {
 		res.send(500, {error: 'error creating the user'});
-	})
-	.success(function (user) {
-		res.send(200)
 	});
 };

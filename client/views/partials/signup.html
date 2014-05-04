@@ -1,6 +1,6 @@
 <div ng-include src="'views/partials/modheader.html'"></div>
 <div class="container col-xs-8 col-sm-4 col-centered">
-    <form role="form" name="signupForm" no-validate>
+    <form role="form" name="signupForm" ng-submit="signup()" no-validate>
         <div class="form-group">
             <label for="firstName"><small class="text-custom-1 p-custom">FIRST NAME</small></label>
             <input name="firstName" type="text" class="form-control p-custom text-custom-1" id="firstName" placeholder="ENTER YOUR FIRST NAME" ng-model="user.firstName" ng-class="firstNameRequired ? 'validation-error-border' : ''">
@@ -23,6 +23,9 @@
             <p ng-show="minLength" class="text-custom-1 p-custom validation-error">minimum 6 characters</p>
             <p ng-show="misMatch" class="text-custom-1 p-custom validation-error">passwords do not match</p>
         </div>
-        <button class="btn btn-default p-custom text-custom-1" ng-click="signup()">Submit</button>
+        <alert type="alertType" ng-show="alertMessage" close="closeAlert()" class="text-custom-1 p-custom"/>
+          {{alertMessage}}
+        </alert>
+        <button class="btn btn-default p-custom text-custom-1">Submit</button>
     </form>
 </div>
