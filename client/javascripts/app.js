@@ -42,9 +42,9 @@ var app = angular.module('app', ['app.controllers','ngRoute','ngResource', 'ui.b
           templateUrl: '/views/partials/home.html',
           controller: 'HomeCtrl'
       })
-      .when('/dropdown', {
-          templateUrl: '/views/partials/dropdown.html',
-          controller: 'DropdownCtrl'
+      .when('/signup', {
+          templateUrl: '/views/partials/signup.html',
+          controller: 'SignupCtrl'
       })
       .otherwise({
           redirectTo: '/'

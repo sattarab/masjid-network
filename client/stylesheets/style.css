@@ -51,11 +51,20 @@ body{
     background:transparent;
     border-color:rgb(0,0,0);
 }
-.navbar{
+.navbar-custom-transparent{
    border-radius: 0 !important;
    -moz-border-radius: 0 !important;
    background-color: transparent;
    background: transparent;
+}
+.navbar-custom-1{
+   border-radius: 0 !important;
+   -moz-border-radius: 0 !important;
+   background-color: rgb(240,190,80);
+   background: -webkit-linear-gradient(rgb(250, 222, 139), rgb(240,190,80)); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(rgb(250, 222, 139), rgb(240,190,80)); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(rgb(250, 222, 139), rgb(240,190,80)); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(rgb(250, 222, 139), rgb(240,190,80));
 }
 .navbar-toggle{
     border:none;
@@ -76,12 +85,6 @@ img{
 }
 .signup-btn{
     margin-top: 8px;
-}
-.navbar-header{
-    border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    background-color: transparent;
-    background: transparent;
 }
 .bg-image{
     position: relative;
@@ -176,4 +179,8 @@ a{
 }
 .glyphicon-custom-color{
     color:#c1c1c4 !important;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }

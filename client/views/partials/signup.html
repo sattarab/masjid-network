@@ -1,1 +1,28 @@
-<div>
+<div ng-include src="'views/partials/modheader.html'"></div>
+<div class="container col-xs-8 col-sm-4 col-centered">
+    <form role="form" name="signupForm" no-validate>
+        <div class="form-group">
+            <label for="firstName"><small class="text-custom-1 p-custom">FIRST NAME</small></label>
+            <input name="firstName" type="text" class="form-control p-custom text-custom-1" id="firstName" placeholder="ENTER YOUR FIRST NAME" ng-model="user.firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName"><small class="text-custom-1 p-custom">LAST NAME</small></label>
+            <input name="lastName" type="text" class="form-control p-custom text-custom-1" id="lastName" placeholder="ENTER YOUR LAST NAME" ng-model="user.lastName">
+        </div>
+        <div class="form-group">
+            <label for="email"><small class="text-custom-1 p-custom">EMAIL</small></label>
+            <input name="email" type="email" class="form-control p-custom text-custom-1" id="email" placeholder="EMAIL" ng-model="user.email" required>
+        </div>
+        <div class="form-group">
+            <label for="password"><small class="text-custom-1 p-custom">CREATE A PASSWORD</small></label>
+            <input name="password" type="password" class="form-control p-custom text-custom-1" id="password" placeholder="PASSWORD" ng-model="user.password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword"><small class="text-custom-1 p-custom">CONFIRM PASSWORD</small></label>
+            <input name="password" type="password" class="form-control p-custom text-custom-1" id="confirmPassword" placeholder="CONFIRM PASSWORD" ng-model="user.confirmPassword" required>
+            <p ng-show="misMatch" class="text-custom-1 p-custom">passwords do not match</p>
+        </div>
+        <button class="btn btn-default p-custom text-custom-1" ng-click="signup(signupForm.$valid)">Submit</button>
+    </form>
+</div>

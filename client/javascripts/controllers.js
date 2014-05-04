@@ -2,26 +2,29 @@
 
 angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.directive', 'ngUpload'])
 .controller('HomeCtrl', function($scope, $http, $modal) {    
-    $scope.user = {};
     $scope.dropdown = false;
-
+})
+.controller('SignupCtrl', function($scope){
+    $scope.dropdown = false;
+    $scope.misMatch = false;
+    $scope.user = {};
     $scope.signup = function(isValid) {
-        if (isValid) {
-            $http.post('/api/register', {
-                username: $scope.user.username,
+        if (isValid){
+            if ($scope.user.password.localeCompare($scope.user.confirmPassword) != 0){
+                $scope.misMatch = true;
+            } 
+        }
+            /*$http.post('/api/register', {
+                firstName: $scope.user.firstName,
+                lastName: $scope.user.lastName,
+                email: $scope.user.email,
+                password: $scope.user.password
             })
             .success(function(user) {
                 $scope.alertMessage = 'We will inform you soon'
             })
             .error(function(err) {
                
-            });
-        }
+            });*/
     };
-    
-})
-.controller('DropdownCtrl', function($scope, $http, $modalInstance){
-    $scope.close = function(){
-        $modalInstance.close();
-    }
 });
