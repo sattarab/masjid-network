@@ -55,11 +55,11 @@ angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.dir
                 password: $scope.user.password
             })
             .success(function(user) {
-                $scope.alertType = 'success'
+                $scope.alertType = 'success';
                 $scope.alertMessage = 'Thank you for signing up';
             })
             .error(function(err) {
-                $scope.alertType = 'error'
+                $scope.alertType = 'danger';
                 $scope.alertMessage = 'an error occured please try again';
             });
         } 
