@@ -3,27 +3,26 @@
     <form role="form" name="signupForm" no-validate>
         <div class="form-group">
             <label for="firstName"><small class="text-custom-1 p-custom">FIRST NAME</small></label>
-            <input name="firstName" type="text" class="form-control p-custom text-custom-1" id="firstName" placeholder="ENTER YOUR FIRST NAME" ng-model="user.firstName" required>
+            <input name="firstName" type="text" class="form-control p-custom text-custom-1" id="firstName" placeholder="ENTER YOUR FIRST NAME" ng-model="user.firstName" ng-class="firstNameRequired ? 'validation-error-border' : ''">
+            <p ng-show="firstNameRequired" class="text-custom-1 p-custom validation-error">This is a required field</p>
         </div>
-
         <div class="form-group">
             <label for="lastName"><small class="text-custom-1 p-custom">LAST NAME</small></label>
             <input name="lastName" type="text" class="form-control p-custom text-custom-1" id="lastName" placeholder="ENTER YOUR LAST NAME" ng-model="user.lastName">
         </div>
         <div class="form-group">
             <label for="email"><small class="text-custom-1 p-custom">EMAIL</small></label>
-            <input name="email" type="email" class="form-control p-custom text-custom-1" id="email" placeholder="EMAIL" ng-model="user.email" required>
+            <input name="email" class="form-control p-custom text-custom-1" id="email" placeholder="ENTER YOUR EMAIL" ng-model="user.email" ng-class="emailRequired || invalidEmail  ? 'validation-error-border' : ''">
+            <p ng-show="emailRequired" class="text-custom-1 p-custom validation-error">This is a required field</p>
+            <p ng-show="invalidEmail" class="text-custom-1 p-custom validation-error">invalid email address</p>
         </div>
         <div class="form-group">
             <label for="password"><small class="text-custom-1 p-custom">CREATE A PASSWORD</small></label>
-            <input name="password" type="password" class="form-control p-custom text-custom-1" id="password" placeholder="PASSWORD" ng-model="user.password" required ng-class="misMatch ? 'validation-error-border' : ''">
+            <input name="password" type="password" class="form-control p-custom text-custom-1" id="password" placeholder="PASSWORD" ng-model="user.password" ng-class="misMatch || passwordRequired || minLength ? 'validation-error-border' : ''">
+            <p ng-show="passwordRequired" class="text-custom-1 p-custom validation-error">This is a required field</p>
+            <p ng-show="minLength" class="text-custom-1 p-custom validation-error">minimum 6 characters</p>
             <p ng-show="misMatch" class="text-custom-1 p-custom validation-error">passwords do not match</p>
         </div>
-        <div class="form-group">
-            <label for="confirmPassword"><small class="text-custom-1 p-custom">CONFIRM PASSWORD</small></label>
-            <input name="password" type="password" class="form-control p-custom text-custom-1" id="confirmPassword" placeholder="CONFIRM PASSWORD" ng-model="user.confirmPassword" required ng-class="misMatch ? 'validation-error-border' : ''">
-            <p ng-show="misMatch" class="text-custom-1 p-custom validation-error">passwords do not match</p>
-        </div>
-        <button class="btn btn-default p-custom text-custom-1" ng-click="signup(signupForm.$valid)">Submit</button>
+        <button class="btn btn-default p-custom text-custom-1" ng-click="signup()">Submit</button>
     </form>
 </div>
