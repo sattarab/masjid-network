@@ -60,7 +60,7 @@ angular.module('app.controllers', ['ngCookies','ngRoute','app.factory', 'app.dir
             })
             .error(function(err) {
                 $scope.alertType = 'danger';
-                $scope.alertMessage = 'Account already exists';
+                $scope.alertMessage = 'account already exists';
             });
         } 
     };
