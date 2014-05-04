@@ -178,7 +178,7 @@ a{
   display:block!important;
 }
 .glyphicon-custom-color{
-    color:#c1c1c4 !important;
+    color: rgb(240,190,80) !important;
 }
 .col-centered{
     float: none;
