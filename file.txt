@@ -1,0 +1,4 @@
+heroku pg:psql HEROKU_POSTGRESQL_PURPLE_URL /* for database */
+heroku run sequelize --env production -m --app masjid-network /* for running migration */
+sequelize -m /* running migration */
+sequelize -c remove_column_location_user /* for initalizing migration file in migrations folder */
